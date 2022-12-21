@@ -1,33 +1,24 @@
+// SACAR PROMEDIO DE NOTAS DE UN ALUMNO
+let notas
+let promedio
+let suma = 0
 
-function calcularPromedio() {
-    let sumaDeNotas = not1 + not2 + not3 + not4 + not5
-    let promNotas = sumaDeNotas / 5
+let alumno = prompt("Ingrese el nombre del alumno: ")
+let nNotas = parseInt(prompt("Cantidad de notas que quiere cargar: "))
 
-    if (promNotas => 6) {
-        alert("¡El alumno " + alumno + " está aprobado!")
-    } else {
-        alert("El alumno " + alumno + " está desaprobado :(")
-    }
+
+for(i = 0; i < nNotas; i++) {
+
+    let notas = parseInt(prompt("Escriba las notas: " + i))
+    suma = suma + notas
+
 }
 
-calcularPromedio()
+promedio = suma / nNotas
+alert("El promedio de las notas es de: " + promedio)
 
-while(alumno != "ESC") {
-
-    alert("A continuación deberá ingresar las 5 notas del alumno")
-    alert('Para dejar de ingresar notas del alumno deberá ingresar "ESC"')
-    let alumno = prompt("Ingrese el nombre del alumno")
-    
-    if (alumno == "ESC") {
-        break
-    } else {
-        let not1 = parseInt(prompt("Ingrese la nota del alumno"))
-        let not2 = parseInt(prompt("Ingrese la nota del alumno"))
-        let not3 = parseInt(prompt("Ingrese la nota del alumno"))
-        let not4 = parseInt(prompt("Ingrese la nota del alumno"))
-        let not5 = parseInt(prompt("Ingrese la nota del alumno"))
-        alert("El promedio de " + alumno + " es de: " + promNotas)
-    }
+if (promedio > 5) {
+    alert("¡El alumno '" + alumno + "' está aprobado!")   
+} else {
+    alert("El alumno '" + alumno + "' está desaprobado :(")
 }
-
-
